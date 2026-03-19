@@ -12,5 +12,5 @@ v = meters_per_second
 t = time
 
 lorentz_factor = 1 / math.sqrt(1-((v**2)/(c**2)))
-time_travel = (t * lorentz_factor) - t
-print("You have traveled " + f"{time_travel:.20f}" + " seconds into the future.")
+time_travel = t - (t / lorentz_factor)
+print("Relative to a stationary observer, you have advanced " + f"{time_travel:.20f}" + " seconds into the future.")
